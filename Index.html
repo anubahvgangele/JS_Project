@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float2 {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+.animate-float2 {
+    animation: float2 5s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+    <div class="flex items-center justify-center h-screen w-screen overflow-hidden bg-[#0F172A] ">
+    <!-- Wrapper -->
+    <div class="relative">
+        <div class=" absolute w-40 h-40  -top-30 -left-30 rounded-full bg-[#ff4b6e] shadow-[0_8px_32px_rgba(0,0,0,0.35)]  animate-float "></div>
+        <div class=" absolute w-40 h-40 rounded-full -bottom-25 -right-25 bg-[#994bff] shadow-[0_8px_32px_rgba(0,0,0,0.35)]  animate-float2 "></div>
+        <div class="relative backdrop-blur-xl h-125 w-100 p-6 flex flex-col  justify-evenly  text-center items-center z-10 font-sans bg-white/10   rounded-md border-solid border-[rgba(255,255,255,0.2)] shadow-lg ">
+            
+            <div>
+                <img src="Firefly_Gemini Flash_can you make face more handsome. 68488.png" alt="" class="h-40 w-40 rounded-full object-cover border-2 border-solid border-[rgba(255,255,255,0.2)] " >
+            </div>
+            <div>
+                <div class="text-[30px] font-bold text-white">Anubhav Gangele</div>
+            </div>
+            <div>
+                <div class=" mb-2.5 text-white/20 text-lg">Software Developer | CSE Graduate</div>
+        
+            </div>
+            <div class="flex gap-x-[20px]">
+                <button class="py-1.5 px-3 border border-white/20 rounded-md gap-1 text-white whitespace-nowrap  flex items-center cursor-pointer transition duration-300  hover:bg-white hover:text-black " onclick="openmodal()" id="">
+                    <i class="fa-solid fa-share"></i>Share My Profile</button>
+                <button class=" py-1.5 px-3  border border-white/20 rounded-md text-white bg-transparent cursor-pointer  duration-300  hover:bg-white hover:text-black ">Follow Me</button>
+            </div>
+
+        </div>
+    </div>
+        
+    </div>
+    <!-- Modal Component -->
+
+     <div
+  id="modal"
+  class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+         w-[500px] bg-[#1f2937]/90 backdrop-blur-xl
+         border border-white/20 rounded-2xl
+         p-6 text-white
+         scale-0 opacity-0
+         transition-all duration-300
+         z-[100]">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center border-b border-white/20 pb-4">
+        <h2 class="text-2xl font-semibold">Share My Profile</h2>
+
+        <button onclick="closemodal()"
+            class="text-2xl hover:text-red-500 transition cursor-pointer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Body -->
+    <div class="mt-5">
+        <p class="text-gray-300 mb-5">
+            Share this profile via
+        </p>
+
+        <!-- Icons -->
+        <div class="flex justify-between">
+
+            <a href="#"
+                class="w-12 h-12 rounded-full border border-white/30
+                       flex items-center justify-center
+                       hover:bg-[#1877F2] transition">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#"
+                class="w-12 h-12 rounded-full border border-white/30
+                       flex items-center justify-center
+                       hover:bg-blue-600 transition">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="#"
+                class="w-12 h-12 rounded-full border border-white/30
+                       flex items-center justify-center
+                       hover:bg-pink-600 transition">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#"
+                class="w-12 h-12 rounded-full border border-white/30
+                       flex items-center justify-center
+                       hover:bg-gray-700 transition">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#"
+                class="w-12 h-12 rounded-full border border-white/30
+                       flex items-center justify-center
+                       hover:bg-sky-600 transition">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+     <div class="overlay fixed inset-0
+         bg-black/50
+         opacity-0
+         pointer-events-none
+         transition-all duration-300" onclick="closemodal()" ></div>
+     <script src="script.js"></script>
+     
+</body>
+</html>
